@@ -2,3 +2,4 @@
 ## Development Notes
 
 This project now uses **TypeScript** and **Tailwind CSS** for styling.
+\nRemoved unused CSS files and added TypeScript interfaces for props.

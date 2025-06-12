@@ -1,7 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { Modal } from 'antd';
-import moment from "jalali-moment"
+import moment from "jalali-moment";
 import { useRouter } from 'next/router';
+
+interface ReserveHourModalProps {
+    show: boolean;
+    setShow: React.Dispatch<React.SetStateAction<boolean>>;
+    freeTimes: string;
+    selectedDay: any;
+    className: string;
+    setShowCalendar: React.Dispatch<React.SetStateAction<boolean>>;
+    selectedHour: any;
+    setSelectedHour: React.Dispatch<React.SetStateAction<any>>;
+}
 
 function ReserveHourModal({
     show,
@@ -12,7 +23,7 @@ function ReserveHourModal({
     setShowCalendar,
     selectedHour,
     setSelectedHour
-}) {
+}: ReserveHourModalProps) {
     const router = useRouter()
     const [dayFreeTime, setDayFreeTime] = useState([]);
 

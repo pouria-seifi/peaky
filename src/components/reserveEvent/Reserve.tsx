@@ -8,7 +8,21 @@ import ReserveHourModal from "./ReserveHourModal";
 import UserInformation from "./UserInformation";
 import { useRouter } from "next/router";
 
-const Reserve = ({ eventData = {} }) => {
+interface EventData {
+    title?: string;
+    duration?: string | number;
+    type?: string;
+    description?: string;
+    className?: string;
+    freeTimes?: string;
+    status?: boolean;
+}
+
+interface ReserveProps {
+    eventData?: EventData;
+}
+
+const Reserve = ({ eventData = {} }: ReserveProps) => {
     const router = useRouter()
     const [selectedDay, setSelectedDay] = useState(null);
     const [selectedHour, setSelectedHour] = useState(null);

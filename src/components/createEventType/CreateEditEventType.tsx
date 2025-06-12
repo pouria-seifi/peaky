@@ -3,10 +3,18 @@ import { apiCreateEventType, apiEditEventType } from '../../apis/apiEventType';
 import { Form, Input, Button, Select, message } from 'antd';
 import { ArrowLeft, Delete, Plus, TickSquare } from "react-iconly";
 import useIsMounted from "../useIsMounted";
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
 import Loading from "../loading/Loading";
 
-const CreateEditEventType = ({ title, backButton, EditEventType = {} }) => {
+import type { EventTypeData } from "../eventTypes/EventType";
+
+interface CreateEditEventTypeProps {
+    title: string;
+    backButton: () => void;
+    EditEventType?: Partial<EventTypeData>;
+}
+
+const CreateEditEventType = ({ title, backButton, EditEventType = {} }: CreateEditEventTypeProps) => {
     const isMounted = useIsMounted();
     const { Option } = Select;
     const { TextArea } = Input;

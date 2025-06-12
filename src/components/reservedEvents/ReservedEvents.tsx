@@ -3,7 +3,21 @@ import React, { useEffect, useState } from 'react'
 import Layout from '../../layout/Layout'
 import { typeOfEvent } from '../functions';
 
-const ReservedEvents = ({ data }) => {
+interface ReservedEvent {
+    _id: string;
+    title: string;
+    date: string;
+    username: string;
+    userEmail: string;
+    type: string;
+    hour: string;
+}
+
+interface ReservedEventsProps {
+    data: ReservedEvent[];
+}
+
+const ReservedEvents = ({ data }: ReservedEventsProps) => {
     const [reservedEvents, setReservedEvents] = useState(data)
 
     useEffect(() => {
