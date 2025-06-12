@@ -1,10 +1,16 @@
 import React, { useState } from "react";
 import Layout from "../../layout/Layout";
-import EventType from "./EventType"
+import EventType from "./EventType";
 import Empty from "../empty/Empty";
 import CreateEditEventType from "../createEventType/CreateEditEventType";
 
-const EventTypes = ({ data }) => {
+import type { EventTypeData } from "./EventType";
+
+interface EventTypesProps {
+    data: EventTypeData[];
+}
+
+const EventTypes = ({ data }: EventTypesProps) => {
     const [eventTypes, setEventTypes] = useState(data);
     const [EditEventType, setEditEventType] = useState(false)
 

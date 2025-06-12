@@ -1,8 +1,9 @@
 import React from "react";
+import type { NextPage } from "next";
 import Login from "../components/login/Login";
 
 
-const LoginPage = () => {
+const LoginPage: NextPage = () => {
     return (
         <Login />
     );

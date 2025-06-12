@@ -1,3 +1,4 @@
+import React from "react";
 import { render, screen } from "@testing-library/react"
 import Sidebar from "../sidebar"
 import { addRouterContext } from "../../__test__/functions";

@@ -1,9 +1,10 @@
 import React from "react";
+import type { NextPage } from "next";
 import { apiGetReserveEventData } from "../../../apis/apiReserveEvent";
 import Reserve from "../../../components/reserveEvent/Reserve";
 import Cookies from 'universal-cookie';
 
-const ReserveEvent = ({ data }) => {
+const ReserveEvent: NextPage<{ data: any }> = ({ data }) => {
 
     return (
         <Reserve

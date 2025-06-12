@@ -1,9 +1,10 @@
 import React from "react";
+import type { NextPage } from "next";
 import { apiGetAllEventTypes } from "../apis/apiEventType";
 import EventTypes from "../components/eventTypes/EventTypes";
 import Cookies from 'universal-cookie';
 
-const EventTypesPage = ({ data }) => {
+const EventTypesPage: NextPage<{ data: any }> = ({ data }) => {
     return (
         <EventTypes
             data={data.eventTypes}

@@ -1,9 +1,10 @@
 import React from 'react'
+import type { NextPage } from 'next'
 import ReservedEvents from '../components/reservedEvents/ReservedEvents'
 import Cookies from 'universal-cookie';
 import { apiGetReservedEvents } from '../apis/apiReserveEvent';
 
-const ReservedEventsPage = ({ data }) => {
+const ReservedEventsPage: NextPage<{ data: any }> = ({ data }) => {
     return (
         <ReservedEvents
             data={data.data}

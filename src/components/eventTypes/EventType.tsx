@@ -8,7 +8,24 @@ import { apiDeleteEventType, apiEditEventType } from "../../apis/apiEventType";
 import useIsMounted from "../useIsMounted";
 import Loading from "../loading/Loading";
 
-const EventType = ({ data, setEventTypes, setEditEventType }) => {
+export interface EventTypeData {
+    _id: string;
+    title: string;
+    duration: number;
+    type: string;
+    className: string;
+    link: string;
+    status: boolean;
+    username: string;
+}
+
+interface EventTypeProps {
+    data: EventTypeData;
+    setEventTypes: React.Dispatch<React.SetStateAction<EventTypeData[]>>;
+    setEditEventType: React.Dispatch<React.SetStateAction<EventTypeData | null>>;
+}
+
+const EventType = ({ data, setEventTypes, setEditEventType }: EventTypeProps) => {
     const { _id, title, duration, type, className, link, status, username } = data
     const [loading, setLoading] = useState(false)
 
