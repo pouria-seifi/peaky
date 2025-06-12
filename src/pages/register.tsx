@@ -1,8 +1,9 @@
 import React from "react";
+import type { NextPage } from "next";
 import Register from "../components/register/Register";
 
 
-const RegisterPage = () => {
+const RegisterPage: NextPage = () => {
     return (
         <Register />
     );

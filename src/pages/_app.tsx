@@ -1,10 +1,11 @@
 import React from "react"
-import "../../public/style/main.css"
+import "../styles/globals.css"
 import "../../node_modules/antd/dist/antd.css";
+import type { AppProps } from "next/app";
 import { IconlyProvider } from 'react-iconly'
 import Head from 'next/head';
 
-const App = ({ Component, pageProps }) => {
+const App = ({ Component, pageProps }: AppProps) => {
     return (
         <IconlyProvider set='curved'>
             <Head>

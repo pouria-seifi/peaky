@@ -1,3 +1,4 @@
+import React from 'react';
 import { RouterContext } from 'next/dist/shared/lib/router-context';
 
 export const addRouterContext = (component, router = {}) => {
@@ -39,3 +40,4 @@ export const addRouterContext = (component, router = {}) => {
         </RouterContext.Provider>
     )
 }
+

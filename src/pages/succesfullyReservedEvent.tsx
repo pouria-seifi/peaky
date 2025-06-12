@@ -1,7 +1,8 @@
 import React from 'react'
+import type { NextPage } from 'next'
 import Layout from '../layout/Layout'
 
-const SuccesfullyReservedEvent = () => {
+const SuccesfullyReservedEvent: NextPage = () => {
     return (
         <Layout
             bodyIdStyle="succesfullyReservedEvent"
